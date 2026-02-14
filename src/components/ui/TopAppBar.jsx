@@ -23,8 +23,8 @@ export default function TopAppBar({ setCurrentView, onVelocitiesChange, onArmVel
   const [driveGamepads, setDriveGamepads] = useState({});
   const [armGamepads, setArmGamepads] = useState({});
   const [openPane, setOpenPane] = useState("None");
-  const [healthDemoMode, setHealthDemoMode] = useState(true);
-  const [mockPeriodMs, setMockPeriodMs] = useState(12000); // 2000 GOOD, 6000 WARN, 12000 LOST
+  const [healthDemoMode, setHealthDemoMode] = useState(false); // if true, health indicator will use synthetic telemetry instead of real socket events, with timing based on mockPeriodMs
+  const [mockPeriodMs, setMockPeriodMs] = useState(2000); // 2000 GOOD, 6000 WARN, 12000 LOST
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
